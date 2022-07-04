@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #cbd3db;
+    background-color: #90b4d8;
     height: 100vh;
 }
 
@@ -21,3 +21,10 @@ body{
     border-radius: 10px;
     transform: translate(-50%,-50%);
 }
+
+#new-todo{
+    padding: 32px 22px;
+    position: relative;
+}
+
+

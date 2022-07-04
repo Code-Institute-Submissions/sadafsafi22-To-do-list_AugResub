@@ -27,4 +27,39 @@ body{
     position: relative;
 }
 
+#new-todo input{
 
+    width: 77%;
+    border-radius: 5px;
+    position: relative;
+    height: 48px;
+    padding: 12px;
+    color: #111111;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    border: 2.1px solid #d1d3d4;
+    font-weight: 501;
+
+}
+
+#new-todo input:focus{
+    outline: none;
+    border-color: #90b4d8;
+}
+
+#new-todo button{
+    
+    background-color: #90b4d8;
+    font-family: 'Poppins',sans-serif;
+    padding: 10px;
+    position: relative;
+    font-weight: 510;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    width: 21%;
+    height: 48px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}

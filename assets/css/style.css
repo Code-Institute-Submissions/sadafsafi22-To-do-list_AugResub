@@ -16,7 +16,7 @@ body{
     top: 23%;
     left: 50%;
     min-width: 460px;
-    min-height: 110px;
+    min-height: auto;
     position: absolute;
     border-radius: 10px;
     transform: translate(-50%,-50%);
@@ -62,4 +62,13 @@ body{
     border-radius: 5px;
     cursor: pointer;
     
+}
+
+#todo-list{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 11px;
+    padding: 30px 20px;
 }

@@ -67,7 +67,7 @@ body{
 #todo-list{
     background: #fff;
     width: 45%;
-    top: 53%;
+    top: 60vh;
     left: 50%;
     max-height:270px;
     overflow-y: scroll;
@@ -83,6 +83,7 @@ ul{
 }
 ul li{
     padding: 5px;
+    border-bottom: 1px solid lightgray;
 }
 ul li:hover{
     background-color: lightgray;

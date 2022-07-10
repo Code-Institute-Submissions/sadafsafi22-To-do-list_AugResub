@@ -35,16 +35,17 @@ inputElement.addEventListener('keydown',function(event){
  */
 function listTodos(){
     let dateTime = new Date().toLocaleDateString() +'  '+ new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        todoArray.push({"text":inputElement.value,"date":dateTime,index:inputElement.value.length});
-        let p ='<ul>';
-        for(todo of todoArray){
-            if(todo.index != 0){
-                p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date}</span></li>`;
-            }   
-        }
-        p +='</ul>';
-        document.getElementById('todo-list').innerHTML = p;
-        inputElement.value = "";
+    let arrayIndexGenerate = (inputElement.value.length != 0 ) ? inputElement.value.length + Math.round((Math.random() * 100)) : 0;
+    todoArray.push({"text":inputElement.value,"date":dateTime,index:arrayIndexGenerate});
+    let p ='<ul>';
+    for(todo of todoArray){
+        if(todo.index != 0){
+            p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date}</span></li>`;
+        }   
+    }
+    p +='</ul>';
+    document.getElementById('todo-list').innerHTML = p;
+    inputElement.value = "";
 }
 
 

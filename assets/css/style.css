@@ -65,10 +65,60 @@ body{
 }
 
 #todo-list{
-    position: relative;
-    background-color: #fff;
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 11px;
-    padding: 30px 20px;
+    background: #fff;
+    width: 45%;
+    top: 53%;
+    left: 50%;
+    max-height:275px;
+    overflow-y: scroll;
+    min-width: 460px;
+    min-height: auto;
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
 }
+
+ul{
+    list-style: none;
+}
+ul li{
+    padding: 5px;
+}
+ul li:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+
+#dateSpan {
+    background-color: #90b4d8;
+    float: right;
+    color:white;
+    margin-top: 5px;
+}
+.btnDelete{
+    color:white;
+    background-color: red;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 3px;
+    border: none;
+}
+
+.btnDelete:hover {
+    background-color: #f44336;
+    color: white;
+    margin: 5px;
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .todoText{
+    width: 63%;
+    height: auto;
+    background-color: aqua;
+    position: absolute;
+    vertical-align: middle;
+  }
+
+

@@ -38,7 +38,7 @@ function listTodos(){
     let arrayIndexGenerate = (inputElement.value.length != 0 ) ? inputElement.value.length + Math.round((Math.random() * 100)) : 0;
     todoArray.push({"text":inputElement.value,"date":dateTime,index:arrayIndexGenerate});
     let p ='<ul>';
-    for(todo of todoArray){
+    for(let todo of todoArray){
         if(todo.index != 0){
             p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date}</span></li>`;
         }   

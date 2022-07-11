@@ -13,13 +13,10 @@ body{
 .content-area{
     background: #fff;
     width: 45%;
-    top: 23%;
-    left: 50%;
+    margin: 0 auto;
     min-width: 460px;
     min-height: auto;
-    position: absolute;
     border-radius: 10px;
-    transform: translate(-50%,-50%);
 }
 
 #new-todo{
@@ -29,7 +26,7 @@ body{
 
 #new-todo input{
 
-    width: 77%;
+    width: 95%;
     border-radius: 5px;
     position: relative;
     height: 48px;
@@ -58,7 +55,7 @@ body{
     border: none;
     font-size: 16px;
     color: #fff;
-    width: 21%;
+    width: 96%;
     height: 48px;
     border-radius: 5px;
     cursor: pointer;
@@ -68,15 +65,12 @@ body{
 #todo-list{
     background: #fff;
     width: 45%;
-    top: 60vh;
-    left: 50%;
     max-height:270px;
     overflow-y: scroll;
     min-width: 460px;
     min-height: auto;
-    position: absolute;
     border-radius: 10px;
-    transform: translate(-50%,-50%);
+    margin:4px auto;
 }
 
 ul{

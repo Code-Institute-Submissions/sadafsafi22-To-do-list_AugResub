@@ -96,6 +96,8 @@ function createTodo(){
  */
 function listTodos(){
 
+    //sortoing our todoArrayObject by using the date 
+    todoArray.sort((firstItem, secondItem) => firstItem.date - secondItem.date);
     let p ='<ul>';
     for(let todo of todoArray){
         if(todo.index != 0){

@@ -124,6 +124,9 @@ ul li:hover{
 
   h1{
     text-align: center;
+    padding: 8px;
+    color:#fff;
+    font-size: 280%;
   }
 
 

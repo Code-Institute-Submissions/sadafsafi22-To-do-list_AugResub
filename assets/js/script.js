@@ -44,7 +44,7 @@ inputElement.addEventListener('keydown',function(event){
             InputDate.focus();
     
         } else {
-            createTodo()
+            createTodo();
         }
     }
 });
@@ -67,7 +67,7 @@ InputDate.addEventListener('keydown',function(event){
             InputDate.focus();
     
         } else {
-            createTodo()
+            createTodo();
         }
     }
 });

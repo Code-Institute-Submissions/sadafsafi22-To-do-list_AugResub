@@ -40,16 +40,13 @@ function listTodos(){
     let p ='<ul>';
     for(let todo of todoArray){
         if(todo.index != 0){
-            p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date}</span></li>`;
-        }   
+            p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><input type="checkbox" onclick="changeWhileChecked(event)"><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date}</span></li>`;
+        }
     }
     p +='</ul>';
     document.getElementById('todo-list').innerHTML = p;
     inputElement.value = "";
 }
-
-
-
 
 //change the border color from red  while typing on the input
 inputElement.addEventListener('keypress',function(){
@@ -65,3 +62,12 @@ function deleteFunction(liContent=""){
     console.log(todoArray);
     listTodos();
 }
+
+//
+function changeWhileChecked(event){
+    const a = event.target.closest('input').checked;
+    if(a)
+     event.target.closest('li').style.textDecoration= 'line-through';
+    else
+      event.target.closest('li').style.textDecoration= 'none';
+   }

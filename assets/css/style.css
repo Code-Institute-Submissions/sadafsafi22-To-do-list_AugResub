@@ -122,4 +122,9 @@ ul li:hover{
     vertical-align: middle;
   }
 
+  input[type='checkbox']{
+    margin: 3px;
+    vertical-align: middle;
+  }
+
 

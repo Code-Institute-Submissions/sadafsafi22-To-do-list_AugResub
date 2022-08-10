@@ -82,6 +82,7 @@ function createTodo(){
     let arrayIndexGenerate = (inputElement.value.length != 0 ) ? inputElement.value.length + Math.round((Math.random() * 100)) : 0;
     //var todoArray = [{'text':'','date':'','index':'0'}];
     //console.log({"text":inputElement.value,"date":todoDate ,'index':arrayIndexGenerate});
+    this.todoArray = this.todoArray || [];
     todoArray.push({"text":inputElement.value,"date":todoDate ,'index':arrayIndexGenerate});
     
     inputElement.value = "";
@@ -129,8 +130,6 @@ function listTodos(){
         document.getElementById('todo-list').innerHTML = p;
     }
      
-    
-    
     
 }
 

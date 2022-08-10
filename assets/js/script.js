@@ -2,7 +2,8 @@
 var inputElement  = document.getElementById('todoText');
 var InputDate = document.getElementById('todoDate');
 // declare an array to save todos
-let todoArray = [{'text':'','date':'',index:'0'}];
+
+var todoArray = [{'text':'','date':'','index':'0'}];
 
 // handeling the add button and check if the input is Entering Something
 document.getElementById('add').addEventListener('click',function(){
@@ -77,14 +78,22 @@ InputDate.addEventListener('keydown',function(event){
  * 
  */
 function createTodo(){
-    var todoDate=new Date(InputDate.value);
+    var todoDate=new Date(InputDate.value).toLocaleDateString("en-US");
     let arrayIndexGenerate = (inputElement.value.length != 0 ) ? inputElement.value.length + Math.round((Math.random() * 100)) : 0;
-    todoArray.push({"text":inputElement.value,"date":todoDate ,index:arrayIndexGenerate});
+    //var todoArray = [{'text':'','date':'','index':'0'}];
+    //console.log({"text":inputElement.value,"date":todoDate ,'index':arrayIndexGenerate});
+    todoArray.push({"text":inputElement.value,"date":todoDate ,'index':arrayIndexGenerate});
     
     inputElement.value = "";
     InputDate.value = "";
     InputDate.style.borderColor = '#d1d3d4';
 
+    window.localStorage.setItem('toDoArrayData', JSON.stringify(todoArray));
+    
+    //console.log(gotedData);
+    // for(let a of gotedData){
+    //     console.log(a);
+    // }
     listTodos();
 }
 
@@ -96,16 +105,32 @@ function createTodo(){
  */
 function listTodos(){
 
-    //sortoing our todoArrayObject by using the date 
-    todoArray.sort((firstItem, secondItem) => firstItem.date - secondItem.date);
-    let p ='<ul>';
-    for(let todo of todoArray){
-        if(todo.index != 0){
-            p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><input type="checkbox" onclick="changeWhileChecked(event)"><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todo.date.toLocaleDateString("en-US")}</span></li>`;
+    //get Data back from localStorage
+    todoArray = JSON.parse(window.localStorage.getItem('toDoArrayData'));
+    if(todoArray != null){
+        //console.log(Object.keys(todoArray).length);
+
+        //sortoing our todoArrayObject by using the date
+        todoArray.sort(function(a,b){
+            const date1 = new Date(a.date);
+            const date2 = new Date(b.date)
+            return  date1 - date2
+        });
+        
+        // loop the array to display the Elements 
+        let p ='<ul>';
+        for(let todo of todoArray){
+            if(todo.index != 0){
+                let todoDate = new Date(todo.date).toLocaleDateString("en-US");
+                p += `<li><button onclick="deleteFunction('${todo.index}')" class="btnDelete">Delete</button><input type="checkbox" onclick="changeWhileChecked(event)"><span class="todoText"></span>${todo.text}</span><span id="dateSpan">${todoDate}</span></li>`;
+            }
         }
+        p +='</ul>';
+        document.getElementById('todo-list').innerHTML = p;
     }
-    p +='</ul>';
-    document.getElementById('todo-list').innerHTML = p;
+     
+    
+    
     
 }
 
@@ -119,6 +144,7 @@ inputElement.addEventListener('keypress',function(){
 //delete todo's which we press the delete button
 function deleteFunction(liContent=""){
     todoArray = todoArray.filter(todo => todo.index != liContent);
+    window.localStorage.setItem('toDoArrayData', JSON.stringify(todoArray));
     console.log(todoArray);
     listTodos();
 }
@@ -130,4 +156,8 @@ function changeWhileChecked(event){
      event.target.closest('li').style.textDecoration= 'line-through';
     else
       event.target.closest('li').style.textDecoration= 'none';
+   }
+
+window.onload = function(){
+    listTodos();
    }

@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to style page-->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>To-do List</title>
 </head>
 <body>
+    <!-- this is for header and we have only one heading for our header -->
     <header>
         <h1>To-Do List</h1>
     </header>
-    <div class="content-area">
-        <div id="new-todo">
+    <!-- this section is for adding new Element -->
+    <section class="content-area">
+        <article id="new-todo">
             <input type="text" id="todoText" placeholder="What to do ?">
             <input type="date" id="todoDate">
             <br>
             <button id="add">Add</button>
-        </div>
-    </div>
-    <div id="todo-list"></div>
-        
-
+        </article>
+    </section>
+    <!-- on this section we list user added To-Do Elements -->
+    <section id="todo-list"></section>
+    
+    <!--footer tage but this application didn't need any footer-->
+    <footer></footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

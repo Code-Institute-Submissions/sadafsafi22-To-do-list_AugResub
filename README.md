@@ -1,10 +1,39 @@
 # To-Do List
 
+##### Table of Contents
+
+[To-Do List](#to-do-list)
+
+[Features](#features)
+
+[Testing User Experience Design](#testing-user-experience-design)
+
+[User Demographic](#user-demographic)
+
+[Application Owners Goals](#application-owners-goals)
+
+[Responsive on all device sizes](#responsive-on-all-device-sizes)
+
+[Technologies](#technologies)
+
+[Testing](#testing)
+
+[Additional Testing](#additional-testing)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
+
+[Acknowledgements](#acknowledgements)
+
+
+
 #### [To-Do List](https://sadafsafi22.github.io/To-do-list/)
 
 To-do list is simple tool to schedule daily activity, it helps to have an organized list of activity which are sorted by date and helps to record business or personal tasks, when you complete the task it makes you feel a sense of achievement and keep you motivate to moving forward. 
 
 ![this image show respondive of garden of babur website ](assets/images/mainPage.JPG)
+
 
 ## Features
 This application contains one home page which has two parts:
@@ -15,12 +44,18 @@ This application contains one home page which has two parts:
     - This box is located on the bottom of the Input box, In this area user can type the deadline they type by themself (MM/DD/YY) or on the right side also they can choose date from calendar.
 *   Add Button
     - After writing the task description and date, user should add the task to record it on the to-do list content, this function is under the date box.
-*   Content Area
-    - This function is invisible until we record a task after we record this page will appear, each task which is shows here have description, deadline, delete option and checkbox, after user complete their task they should mark the checkbox or delete it from the list.
 
 ![All Features Images](assets/images/textboximage.JPG)
+*   Content Area
+    - This function is invisible until we record a task after we record this page will appear, each task which is shows here have description, deadline, delete option and checkbox,
+*   Checkbox
+    - after user complete their task they should mark the checkbox, and the completed task take style with line on the text.
+*   Delete Button
+    -  By clicking on Delete Button it remove that task from the list.
 
-## Testing User Experience Design (UXD)
+![All Features Images](assets/images/Content.JPG)
+
+## Testing User Experience Design
 We are care for our users there for we create this Application which is designed  is  for users which want to have an organized list of their tasks to record their tasks and see specific dateline of each tasks which really helps to accomplish them successfully.
 
 ## User Demographic

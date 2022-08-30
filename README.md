@@ -69,6 +69,9 @@ This application is designed to be responsive for all devices such as computer, 
 
 ## Technologies
 
+* Localstorage
+    - using localstorage for saveing items which will display after reload, refresh the page.
+
 * Languages Used
     - HTML5
     - CSS3
@@ -101,7 +104,7 @@ This application is designed to be responsive for all devices such as computer, 
 * We asked some of our friends and family to check the site and ensure that all pages are display correctly.
 
 * Unfixed Bugs
-    - We solved all the bugs which report to us by mentor and friends from slack community.
+    - There is a bug not fixed , after marking done a to-do item while reloading or refresh it remove the check mark from to-do item.
 
 * Design
     - Color arrangement, mostly the color is used from within the display color to have a good color arrangement for the website.
